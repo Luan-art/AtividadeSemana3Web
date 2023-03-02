@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação Formulário</title>
+</head>
+<body>
+
+    <h1> Matricula Aluno </h1>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <br>
+            <label for="letter">Nome: </label>
+            <input type="text" name="letter" id="letter" required pattern="[a-zA-Z\s]+$">
+            <br><br>
+            <label for="name">CPF: </label>
+            <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" title="XXX.XXX.XXX-XX" pattern="(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})">
+            <br><br>
+            <label for="dt">Data de nascimento: </label>
+            <br>
+            <input type="date" name="dt" id="dt" required min="2020-01-01" max="2022-02-03">
+            <br><br>
+            <label for="sex"> sexo: </label>
+            <input type = "radio" name = "feminino" id="feminino"> feminino <input type = "radio" name = "mascluino" id="mascluino"> masculino </label>
+            <br><br>
+            <label for="cidade"> Cidade: </label>
+            <input type="text" name="cidade" id="cidade" required pattern="[a-zA-Z\s]+$">
+            <label for = "estado"> Estado</label>
+            <select name="states" id="states">
+                <optgroup label="  ">
+                <option value="Sao Paulo">SP</option>
+                <option value="Rio de Janeiro">RJ</option>
+                <option value="Espirito Santo">ES</option>
+                <option value="Minas Gerais">MG</option>
+                </optgroup>
+
+                </select> 
+
+            
+        </fieldset>
+    </form>
+
+    <br><br>
+    
+    <form>
+        <fieldset>
+            <legend>Dados da Matricula</legend>
+            <br>
+            <label for="curso">Curso: </label>
+            <input type = "radio" name = "ADS" id="ADS"> Analise e Desenvolviemtno de sistemas
+             <input type = "radio" name = "Eng" id="ENG"> Engenharia Mecanica 
+             <input type = "radio" name = "Int" id="Int"> Tecnologia e sistemas da Internet</label>
+            <br><br>
+            <label for="Op">Disciplinas Optativas: </label>
+            <br>
+            <input type="checkBox" name="PG" id="Pg"> Programação de Robos
+            <input type="checkBox" name="IA" id="IA"> Desenvolvimento de Inteligencia Artificial
+            <br>
+            <input type="checkBox" name="MC" id="MC"> Modelagem Computacional
+            <input type="checkBox" name="AI" id="AI"> Ambiente Isolado: Desenvolvimento com Decker
+            <br><br>
+            <label for="SurgF">Sugestão de Disciplinas Futuras: </label>
+            <br>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+        <br><br>
+            
+        </fieldset>
+    </form>
+
+    <br><br>
+
+    <div style="text-align: center;">
+        
+        <button type = "button"> Enviar</button>
+
+    </div>
+
+</body>
+</html>
